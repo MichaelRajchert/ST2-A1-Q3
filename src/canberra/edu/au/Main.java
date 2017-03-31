@@ -46,7 +46,7 @@ public class Main {
         }
         //IF END
         if (markerPosX == grid.size - 1 && markerPosY == grid.size - 1){
-            path += ("(" + markerPosX + "," + markerPosY + ") DONE");
+            path += ("DONE");
             marker.allPaths.add(path);
             return;
         }
@@ -75,7 +75,7 @@ public class Main {
     //MAIN
     public static void main(String[] args){
         grid.size = 4;
-        grid.outOfBoundAmount = 2;
+        grid.outOfBoundAmount = 4;
         if (grid.outOfBoundAmount > grid.size*grid.size - 2){
             System.out.println("ERROR: There cannot be more OutOfBound zones than there are spaces to place them.");
         } else {
